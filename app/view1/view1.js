@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('myApp.view1', ['ngRoute'])
-
-
-
-
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/view1', {
         templateUrl: 'view1/view1.html',
@@ -29,7 +25,6 @@ angular.module('myApp.view1', ['ngRoute'])
     })
 
     .controller('View1Ctrl', ['$scope', 'TimeService', function($scope, TimeService) {
-
         $scope.shows = [
             {
                 name: 'Breaking Bad',
@@ -52,9 +47,7 @@ angular.module('myApp.view1', ['ngRoute'])
       function updateCurrentTime() {
         $scope.currentTime = TimeService.getCurrentTime();
       }
-
       updateCurrentTime();
-
       // Update time every second
       setInterval(function() {
         $scope.$apply(updateCurrentTime);

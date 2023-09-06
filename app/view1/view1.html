@@ -3,10 +3,8 @@
         <span>Shows</span>
         <span style="float: right">{{ currentTime | formatTime }}</span>
     </h3>
-
     <accordion ng-repeat="show in shows" class="test">
         <accordion-header >{{show.name}}</accordion-header>
         <accordion-body>{{show.description}}</accordion-body>
     </accordion>
-
 </div>
